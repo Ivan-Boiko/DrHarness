@@ -1,28 +1,50 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.catalog__btn-view').forEach(function(tabsLang){
-      tabsLang.addEventListener('click', function(ev){
+let tabs = function () {
+    let btns = document.querySelectorAll('.catalog__btn-view');
+    btns.forEach(function(e){
+      e.addEventListener('click', function(ev){
         const btn = document.querySelectorAll('.catalog__btn-view')
-        btn.forEach(function(btns){
-          btns.classList.toggle('catalog__btn-view--active')
-        if(btns.classList.contains('catalog__btn-view--active')){
-          btns.disabled = true;
-          btns.setAttribute('disabled', true)
+        btn.forEach(function(ev){
+          ev.classList.toggle('catalog__btn-view--active')
+        if(ev.classList.contains('catalog__btn-view--active')){
+          ev.disabled = true;
+          ev.setAttribute('disabled', true)
         }
         else {
-          btns.disabled = false;
+          ev.disabled = false;
         }
         })
-
         const path = ev.currentTarget.dataset.path;
-        document.querySelectorAll('.catalog__list').forEach(function(c){
+        let catalogList = document.querySelectorAll('.catalog__list');
+        catalogList.forEach(function(c){
           c.classList.remove('catalog__list--active')
         })
 
         document.querySelector(`[data-target="${path}"]`).classList.add('catalog__list--active')
         })
     });
+}
 
-  let orderModal = () => {
+let fixBlocks = document.querySelectorAll('.fix-block');
+
+let disableScroll = function () {
+  let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+  document.body.classList.add('disable-scroll');
+  fixBlocks.forEach((el) => {
+    el.style.paddingRight = paddingOffset;
+  })
+  document.body.style.paddingRight = paddingOffset
+}
+
+let enableScroll = function () {
+  document.body.classList.remove('disable-scroll');
+  fixBlocks.forEach((el) => {
+    el.style.paddingRight = paddingOffset;
+  })
+  document.body.style.paddingRight = '0px';
+}
+
+let orderModal = () => {
       const btns = document.querySelectorAll(".catalog__btn-buy");
       const modalOverlay = document.querySelectorAll('.modal__overlay');
       const modal = document.querySelectorAll('.modal')
@@ -38,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 elems.classList.add('modal__overlay--visible');
               })
 
-              document.getElementsByTagName('body')[0].style.overflow = "hidden"
+              disableScroll();
           })
       });
       modalOverlay.forEach( (elem) =>{
@@ -47,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
             elem.classList.remove("modal__overlay--visible")
               modal.forEach((el) => {
                   el.classList.remove("modal--active")
-                  document.getElementsByTagName('body')[0].style.overflow = "auto"
               })
+              enableScroll ();
           }
       });
       })
@@ -64,9 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
               document.getElementsByTagName('body')[0].style.overflow = "auto"
           })
       })
-    }
-  orderModal();
-
+}
 
  const choices =  new Choices( ".modal__select", {
     searchEnabled: false,
@@ -74,13 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
     classNames: {
       containerOuter: 'choices modal__choices',
     }
-  });
+});
 
-	var selector = document.querySelector("input[type='tel']");
-	var im = new Inputmask("+7(999)999-99-99")
-	im.mask(selector);
+var selector = document.querySelector("input[type='tel']");
+var im = new Inputmask("+7(999)999-99-99")
+im.mask(selector);
 
- 	new JustValidate('.modal__form', {
+new JustValidate('.modal__form', {
 		colorWrong: '#ff3300',
 		rules: {
 			name: {
@@ -114,5 +134,35 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 });
 
+let rebootDisable = function() {
+  let formBtn = document.querySelector('.modal__btn');
+  formBtn.addEventListener('click', function(e){
+    e.preventDefault();
+  })
+}
+
+let modalContent = function (){
+  let d = document.querySelectorAll(".catalog__btn-buy");
+  let m = document.querySelector(".modal__title");
+  let i = document.querySelector(".modal__img")
+  d.forEach((a) => {
+    a.addEventListener('click', function(e){
+       let target = e.currentTarget;
+       let mom = target.parentElement;
+       let title = mom.children[1];
+       let textTitle = title.innerHTML;
+       m.innerHTML = textTitle;
+       let img = mom.firstElementChild;
+       let src = img.getAttribute("src")
+       i.setAttribute("src", src);
+    });
+  });
+}
+
+
+modalContent();
+rebootDisable ();
+tabs ();
+orderModal();
 });
 
