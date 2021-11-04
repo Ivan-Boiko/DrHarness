@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/vendor/normalize.css">
+    <link rel="stylesheet" href="style/vendor/choices.min.css">
+    <link rel="stylesheet" href="style/settings.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/components/modal.css">
+    <script  src="scripts/vendor/choices.min.js"></script>
+    <script  src="scripts/vendor/inputmask.min.js"></script>
+    <script  src="scripts/vendor/just-validate.min.js"></script>
+    <script defer src="scripts/index.js"></script>
+    <title>Dr.Herness</title>
+</head>
+<body>
+<header class="header">
+  <div class="container header__container">
+    <img src="img/logo.png" alt="logo" class="header__logo">
+    <ul class="header__list list-reset">
+      <li class="header__items"><a href="#catalog" class="header__hrefs">КАТАЛОГ</a></li>
+      <li class="header__items"><a href="#about" class="header__hrefs">ПРЕИМУЩЕСТВА</a></li>
+      <li class="header__items"><a href="#" class="header__hrefs">ОТЗЫВЫ</a></li>
+      <li class="header__items"><a href="#order" class="header__hrefs">КАК ЗАКАЗАТЬ</a></li>
+    </ul>
+  </div>
+</header>
+  <main class="main">
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__par-1 hero--color">Женские кожанные портупеи</p>
+          <h1 class="hero__title title-reset">Dr.Harness</h1>
+          <p class="hero__par-2 hero--color">любая модель со скидкой 50%</p>
+          <p class="hero__par-3 hero--color ">всего за 2990р.</p>
+        </div>
+        <div class="hero__hrefs-container">
+          <a href="#" class="hero__hrefs">ПОВСЕДНЕВНЫЕ ПОРТУПЕИ</a>
+          <a href="#" class="hero__hrefs">ЭРОТИЧЕСКИЕ ПОРТУПЕИ</a>
+        </div>
+      </div>
+  </section>
+  <section class="about" id="about">
+    <div class="container about__container">
+      <h2 class="about__title title-reset">ХИТ №1 В МИРЕ - МОДНЫЕ ЖЕНСКИЕ ПОРТУПЕИ</h2>
+      <p class="about__information">Как и все кожанные аксессуары, портупея находится сегодя на пике востребованности в мире моды, даря своей обладательнице внимание и уверенность в себе.</p>
+      <p class="about__information">Многообразие видов портупей - это как Характер каждой девушки: от портупеи из тонких ремешков для романтичных и женсвтенных натур, до сложных сплетений из средних и широких - для дерзких и раскрепощенных.</p>
+    </div>
+    <img src="img/photo.jpg" alt="фото" class="about__img">
+  </section>
+  <section class="size">
+    <div class="container size__container">
+      <h2 class="size__title title-reset">Таблица размеров </h2>
+      <table class="size__table">
+        <tbody>
+        <tr class="size__str size__str--bg">
+          <td class ="size__cell size__cell--font">Международный</td>
+          <td class ="size__cell size__cell--font">XS</td>
+          <td class ="size__cell size__cell--font">S</td>
+          <td class ="size__cell size__cell--font">M</td>
+          <td class ="size__cell size__cell--font">L</td>
+          <td class ="size__cell size__cell--font">XL</td>
+          <td class ="size__cell size__cell--font">XXl</td>
+        </tr>
+        <tr class="size__str">
+          <td class ="size__cell size__cell--font">Российский</td>
+          <td class ="size__cell size__cell--font">40</td>
+          <td class ="size__cell size__cell--font">42</td>
+          <td class ="size__cell size__cell--font">44/46</td>
+          <td class ="size__cell size__cell--font">48/50</td>
+          <td class ="size__cell size__cell--font">52/54</td>
+          <td class ="size__cell size__cell--font">56</td>
+        </tr>
+        <tr class="size__str size__str--bg">
+          <td class ="size__cell">Бедра(см)</td>
+          <td class ="size__cell">84-92</td>
+          <td class ="size__cell">92-95</td>
+          <td class ="size__cell">96-101</td>
+          <td class ="size__cell">102-108</td>
+          <td class ="size__cell">109-116</td>
+          <td class ="size__cell">117-121</td>
+        </tr>
+        <tr class="size__str">
+          <td class ="size__cell">Талия(см)</td>
+          <td class ="size__cell">60-65</td>
+          <td class ="size__cell">66-69</td>
+          <td class ="size__cell">70-77</td>
+          <td class ="size__cell">78-85</td>
+          <td class ="size__cell">86-95</td>
+          <td class ="size__cell">96-102</td>
+        </tr>
+        <tr class="size__str size__str--bg">
+          <td class ="size__cell">Грудь(см)</td>
+          <td class ="size__cell">74-80</td>
+          <td class ="size__cell">82-85</td>
+          <td class ="size__cell">86-93</td>
+          <td class ="size__cell">94-102</td>
+          <td class ="size__cell">103-113</td>
+          <td class ="size__cell">114-119</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+
+  </section>
+  <section class="catalog" id="catalog">
+    <div class="modal" data-target="product_1">
+      <div class="modal__overlay">
+        <div class="modal__window modal__window--one">
+          <button class="modal__btn-close btn">
+            <svg class="modal__svg" width="29" height="29" viewBox="0 0 29 29" fill="black" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.63672" width="37.2838" height="3.72838" transform="rotate(45 2.63672 0)" class="header__close-btn-svg" fill="black"/>
+              <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" class="header__close-btn-svg" fill="black"/>
+              </svg>
+          </button>
+          <div class="modal__content-container">
+            <img src="img/girl1.jpg" alt="girl" class="modal__img">
+            <div class="modal__content">
+                <h2 class="modal__title subtitle title-reset">Портупея "Пеппи"</h2>
+                <div class="modal__price-container price">
+                  <span class="modal__old-price price__old">4990р.</span>
+                  <span class="modal__new-price price__new">2990р.</span>
+                </div>
+                <select  class="modal__select">
+                <option value="XS" class="modal__option"></option>
+                <option value="S" class="modal__option"></option>
+                <option value="M" class="modal__option"></option>
+                <option value="L" class="modal__option"></option>
+                </select>
+                <form  class="modal__form">
+                  <label for="input-name" class="visually-hidden"></label>
+                  <input type="text" placeholder="Введите ваше имя"  class="modal__input modal__input--name" data-validate-field="name">
+                  <label for="input-tel" class="visually-hidden"></label>
+                  <input type="tel" placeholder="Введите ваш телефон"  class="modal__input modal__input--tel" data-validate-field="tel">
+                  <button class="modal__btn btn-buy ">Оформить заказ</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container catalog__container">
+      <h2 class="catalog__title">Каталог</h2>
+      <div class="catalog__btn-view-container">
+        <button class="catalog__btn-view btn catalog__btn-view--active" data-path="one">ПОВСЕДНЕВНЫЕ ПОРТУПЕИ</button>
+        <button class="catalog__btn-view btn" data-path="two">ЭРОТИЧЕСКИЕ ПОРТУПЕИ</button>
+      </div>
+      <ul class="catalog__list catalog__list--active list-reset" data-target="one">
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container ">
+            <img src="img/girl1.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Пеппи"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy" data-path="product_1">Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl2.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Влади"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XLL</button></li>
+            </ul>
+            <div class="catalog__color catalog__color--black"></div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy" data-path="product_1" >Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl3.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Джони Миллер"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy" data-path="product_1" >Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl1.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Пеппи"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy" data-path="product_1" >Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl2.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Влади"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XLL</button></li>
+            </ul>
+            <div class="catalog__color catalog__color--black"></div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy" data-path="product_1" >Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl3.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Джони Миллер"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy" data-path="product_1" >Заказать</button>
+          </div>
+        </li>
+      </ul>
+      <ul class="catalog__list list-reset" data-target="two">
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl1.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Пеппи"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy">Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl2.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Влади"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XLL</button></li>
+            </ul>
+            <div class="catalog__color catalog__color--black"></div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy">Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl3.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Джони Миллер"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy">Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl1.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Пеппи"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy">Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl2.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Влади"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XLL</button></li>
+            </ul>
+            <div class="catalog__color catalog__color--black"></div>
+            <div class="catalog__price-container price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy">Заказать</button>
+          </div>
+        </li>
+        <li class="catalog__items">
+          <div class="catalog__sale">-53%</div>
+          <div class="catalog__content-container">
+            <img src="img/girl3.jpg" alt="girl" class="catalog__img">
+            <h2 class="catalog__subtitle subtitle title-reset">Портупея "Джони Миллер"</h2>
+            <ul class="catalog__size-list list-reset">
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">XS</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">S</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">M</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn">L</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XL</button></li>
+              <li class="catalog__size-items"><button class="catalog__size-btn btn catalog__size-btn--disable">XLL</button></li>
+            </ul>
+            <div class="catalog__color-container">
+              <div class="catalog__color catalog__color--black"></div>
+              <div class="catalog__color catalog__color--red"></div>
+            </div>
+            <div class="catalog__price-container  price">
+              <span class="catalog__old-price price__old">4990р.</span>
+              <span class="catalog__new-price price__new">2990р.</span>
+            </div>
+            <button class="catalog__btn-buy btn btn-buy">Заказать</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="order" id="order">
+    <div class="container order__container">
+    <h2 class="order__title title-reset">КАК ЗАКАЗАТЬ?</h2>
+
+    <ul class="order__list list-reset">
+      <li class="oreder__items">
+        <div class="order__icon order__icon--first"></div>
+        <div class="order__decor"></div>
+        <p class="order__text ">Вы оформляете заказ на нашем сайте</p>
+      </li>
+      <li class="oreder__items">
+        <div class="order__icon order__icon--second"></div>
+
+        <p class="order__text ">Менеджер перезвонит для уточнения деталей заказа</p>
+      </li>
+      <li class="oreder__items ">
+        <div class="order__icon order__icon--third"></div>
+
+        <p class="order__text">В ближайшее время отправляем ваш заказ</p>
+      </li>
+      <li class="oreder__items ">
+        <div class="order__icon order__icon--four"></div>
+
+        <p class="order__text">Вы оплачиваете заказ при получении </p>
+      </li>
+
+    </ul>
+
+  </div>
+  </section>
+</main>
+
+</body>
+</html>
